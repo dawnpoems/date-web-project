@@ -1,0 +1,8 @@
+#main-screen {
+  display: flex;
+  justify-content: space-around;
+}
+.cal {
+  display: flex;
+  align-items: center;
+}
