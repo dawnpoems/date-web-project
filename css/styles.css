@@ -1,8 +1,18 @@
+@import url(cal.css);
+@import url(line.css);
+
 #main-screen {
   display: flex;
-  justify-content: space-around;
-}
-.cal {
-  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+.main-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  border: 1px solid black;
+  margin: 5px;
 }

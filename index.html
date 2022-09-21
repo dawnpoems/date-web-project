@@ -9,55 +9,41 @@
   </head>
   <body>
     <header>
-      <h1>데이트 정산</h1>
+      <h1>정 산</h1>
       <h2></h2>
     </header>
     <main id="main-screen">
-      <div id="main-cal">
-        <div class="cal">
-          <span class="cal-name">엙언</span>
-          <div class="cal-part">
-            <form class="cal-form">
-              <div class="cal-form__content">
-                <input
-                  type="text"
-                  placeholder="얼마죠?"
-                  class="cal-form__content__num"
-                />
-                <input
-                  type="text"
-                  placeholder="왜썼죠?"
-                  class="cal-form__content__item"
-                />
-              </div>
-              <button class="cal-form__btn">확인</button>
-            </form>
-          </div>
+      <div class="count">
+        <span class="count-name">멩구</span>
+        <div class="count-part">
+          <form class="count-form">
+            <input
+              class="count-form__content__price"
+              type="number"
+              placeholder="얼마죠?"
+              required
+            />
+            <input
+              class="count-form__content__reason"
+              type="text"
+              placeholder="왜썼죠?"
+            />
+            <button class="count-form__btn">확인</button>
+          </form>
+          <div class="count-item"></div>
         </div>
-        <div class="cal">
-          <span class="cal-name">밍구</span>
-          <div class="cal-part">
-            <form class="cal-form">
-              <div class="cal-form__content">
-                <input
-                  type="text"
-                  placeholder="얼마죠?"
-                  class="cal-form__content__num"
-                />
-                <input
-                  type="text"
-                  placeholder="왜썼죠?"
-                  class="cal-form__content__item"
-                />
-              </div>
-              <button class="cal-form__btn">확인</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div id="main-line">
-        <div class="line-total"></div>
       </div>
     </main>
+    <nav>
+      <div class="total__part">
+        <span>멩구 총</span>
+        <div class="line__part__count">여기 정산</div>
+      </div>
+      <div class="total__part">
+        <span>밍구 총</span>
+        <div class="line__part__count">여기 정산</div>
+      </div>
+    </nav>
+    <script src="js/count.js"></script>
   </body>
 </html>
