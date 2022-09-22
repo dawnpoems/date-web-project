@@ -30,20 +30,46 @@
             />
             <button class="count-form__btn">확인</button>
           </form>
-          <div class="count-item"></div>
+          <ul class="count-item"></ul>
+        </div>
+      </div>
+      <div class="count2">
+        <span class="count2-name">밍구</span>
+        <div class="count2-part">
+          <form class="count2-form">
+            <input
+              class="count2-form__content__price"
+              type="number"
+              placeholder="얼마죠?"
+              required
+            />
+            <input
+              class="count2-form__content__reason"
+              type="text"
+              placeholder="왜썼죠?"
+            />
+            <button class="count2-form__btn">확인</button>
+          </form>
+          <ul class="count2-item"></ul>
         </div>
       </div>
     </main>
     <nav>
       <div class="total__part">
         <span>멩구 총</span>
-        <div class="line__part__count">여기 정산</div>
+        <div class="total__part__count">여기 정산</div>
       </div>
-      <div class="total__part">
+      <div class="total2__part">
         <span>밍구 총</span>
-        <div class="line__part__count">여기 정산</div>
+        <div class="total2__part__count">여기 정산</div>
+      </div>
+      <div class="total__all">
+        <span>총 정산</span>
+        <div class="total__all__count">여기 총 정산값</div>
       </div>
     </nav>
-    <script src="js/count.js"></script>
+    <script src="js/countAll.js"></script>
+    <script src="js/count1.js"></script>
+    <script src="js/count2.js"></script>
   </body>
 </html>

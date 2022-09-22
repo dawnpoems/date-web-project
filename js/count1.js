@@ -2,8 +2,7 @@ const countForm = document.querySelector(".count-form");
 const countPrice = document.querySelector(".count-form__content__price");
 const countReason = document.querySelector(".count-form__content__reason");
 const countList = document.querySelector(".count-item");
-
-let counts = [];
+const totalcount = document.querySelector(".total__part__count");
 
 function saveCounts() {
   localStorage.setItem("counts", JSON.stringify(counts));
@@ -14,6 +13,9 @@ function deleteCount(event) {
   li.remove();
   counts = counts.filter((count) => count.id !== parseInt(li.id));
   saveCounts();
+  sumsum = 0;
+  counts.forEach(calCount);
+  paintcal();
 }
 
 function paintCount(newCount) {
@@ -46,6 +48,8 @@ function handleCountSubmit(event) {
   counts.push(newCountObj);
   paintCount(newCountObj);
   saveCounts();
+  calCount(newCountObj);
+  paintcal();
 }
 
 // // 연관함수 참조하면서 다 넣어보기.
@@ -54,24 +58,20 @@ countForm.addEventListener("submit", handleCountSubmit);
 
 const savedCounts = localStorage.getItem("counts");
 
-let sumsum = 0;
-
 if (savedCounts !== null) {
   const parsedCounts = JSON.parse(savedCounts);
   counts = parsedCounts;
   parsedCounts.forEach(paintCount);
   parsedCounts.forEach(calCount);
+  paintcal();
 }
-
-// let calnum = [];
 
 function calCount(count) {
   pprice = count.price;
   sumsum = sumsum + parseInt(pprice);
-  console.log(pprice);
-  console.log(sumsum);
-  // pprice.foreach((item) => {
-  //   sumsum += item;
-  // });
-  // console.log(sumsum);
+}
+
+function paintcal() {
+  totalcount.innerText = sumsum;
+  paintTotalAll(sumsum, sumsum2);
 }
