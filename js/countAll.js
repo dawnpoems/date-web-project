@@ -14,9 +14,9 @@ function paintTotalAll(sumsum, sumsum2) {
     allCount.innerText = "둘이 똑같이 냈어유!";
   } else if (sumsum > sumsum2) {
     allSpan.innerText = "밍구가 → 멩구에게";
-    allCount.innerText = Math.abs(sumsum - sumsum2) + "만큼 주세요~";
+    allCount.innerText = Math.abs(sumsum - sumsum2) + " 만큼 주세요~";
   } else {
     allSpan.innerText = "멩구가 → 밍구에게";
-    allCount.innerText = Math.abs(sumsum - sumsum2) + "만큼 주세요~";
+    allCount.innerText = Math.abs(sumsum - sumsum2) + " 만큼 주세요~";
   }
 }

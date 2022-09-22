@@ -1,0 +1,50 @@
+nav {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+.total {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 30px 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.total__part {
+  width: 40%;
+}
+
+.total__part__count {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+.total2__part__count {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+
+.total__all {
+  margin: 10px 30px 30px 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+.total__all__count {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin-top: 5px;
+}
