@@ -20,3 +20,20 @@ function paintTotalAll(sumsum, sumsum2) {
     allCount.innerText = Math.abs(sumsum - sumsum2) / 2 + " 만큼 주세요~";
   }
 }
+
+const body = document.body;
+const main = document.getElementById("main-screen");
+
+function handleResize() {
+  const width = window.innerWidth;
+  if (width > 1000) {
+    main.style.flexDirection = "row";
+    main.style.alignItems = "flex-start";
+  } else {
+    main.style.flexDirection = "column";
+    main.style.alignItems = "center";
+  }
+}
+
+window.addEventListener("resize", handleResize);
+handleResize();

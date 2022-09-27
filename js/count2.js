@@ -8,7 +8,23 @@ const count2Reason = document.querySelector(
 const count2List = document.querySelector(".count2 .count-item");
 const total2count = document.querySelectorAll(".total__part__count")[1];
 
-console.log(count2Form, count2Price, count2Reason, count2List, total2count);
+const openClose2 = document.querySelector(".count2 .open-and-close");
+const openClose2Name = document.querySelector(".count2 .open-and-close__name");
+const openClose2Icon = document.querySelector(".count2 .open-and-close__icon");
+
+function handleOpenClose2() {
+  if (count2List.style.display === "none") {
+    count2List.style.display = "block";
+    openClose2Name.innerText = "전체항목 닫기";
+    openClose2Icon.innerText = "➖";
+  } else {
+    count2List.style.display = "none";
+    openClose2Name.innerText = "전체항목 열기";
+    openClose2Icon.innerText = "➕";
+  }
+}
+
+openClose2.addEventListener("click", handleOpenClose2);
 
 let counts2 = [];
 
@@ -34,7 +50,7 @@ function paintCount2(newCount) {
   const reasonSpan = document.createElement("span");
   reasonSpan.innerText = newCount.reason;
   const button = document.createElement("button");
-  button.innerText = "X";
+  button.innerText = "❌";
   button.addEventListener("click", deleteCount2);
   li.appendChild(priceSpan);
   li.appendChild(reasonSpan);

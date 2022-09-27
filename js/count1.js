@@ -4,6 +4,24 @@ const countReason = document.querySelector(".count-form__content__reason");
 const countList = document.querySelector(".count-item");
 const totalcount = document.querySelector(".total__part__count");
 
+const openClose = document.querySelector(".open-and-close");
+const openCloseName = document.querySelector(".open-and-close__name");
+const openCloseIcon = document.querySelector(".open-and-close__icon");
+
+function handleOpenClose() {
+  if (countList.style.display === "none") {
+    countList.style.display = "block";
+    openCloseName.innerText = "전체항목 닫기";
+    openCloseIcon.innerText = "➖";
+  } else {
+    countList.style.display = "none";
+    openCloseName.innerText = "전체항목 열기";
+    openCloseIcon.innerText = "➕";
+  }
+}
+
+openClose.addEventListener("click", handleOpenClose);
+
 function saveCounts() {
   localStorage.setItem("counts", JSON.stringify(counts));
 }
@@ -26,7 +44,7 @@ function paintCount(newCount) {
   const reasonSpan = document.createElement("span");
   reasonSpan.innerText = newCount.reason;
   const button = document.createElement("button");
-  button.innerText = "X";
+  button.innerText = "❌";
   button.addEventListener("click", deleteCount);
   li.appendChild(priceSpan);
   li.appendChild(reasonSpan);
