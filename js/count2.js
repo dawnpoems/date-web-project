@@ -45,6 +45,7 @@ function deleteCount2(event) {
 function paintCount2(newCount) {
   const li = document.createElement("li");
   li.id = newCount.id;
+  const div = document.createElement("div");
   const priceSpan = document.createElement("span");
   priceSpan.innerText = newCount.price;
   const reasonSpan = document.createElement("span");
@@ -52,10 +53,11 @@ function paintCount2(newCount) {
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteCount2);
-  li.appendChild(priceSpan);
-  li.appendChild(reasonSpan);
+  div.appendChild(priceSpan);
+  div.appendChild(reasonSpan);
+  li.appendChild(div);
   li.appendChild(button);
-  count2List.appendChild(li);
+  count2List.prepend(li);
 }
 
 function handleCountSubmit2(event) {

@@ -1,12 +1,17 @@
+h1 {
+  margin: 10px 0px;
+}
 #main-screen {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  overflow-y: scroll;
+  max-height: 600px;
+  margin-bottom: 230px;
 }
 
 .count {
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   width: 90%;
@@ -14,7 +19,7 @@
 
 .count2 {
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   width: 90%;
@@ -23,7 +28,7 @@
 .count-form {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .count-form__content {
@@ -41,11 +46,18 @@
 .count-form__content__reason {
   height: 20px;
   width: 70%;
+  margin-top: 5px;
 }
 
 .count-name {
-  margin: 5px;
+  margin: 5px 0px;
+  font-weight: bolder;
 }
+.open-and-close {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px 0;
+}
+
 .count-item {
   display: block;
 }
@@ -54,4 +66,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.count-item li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.count-item li div span:first-child {
+  font-size: larger;
+  font-weight: bold;
+}
+.count-item li div span:last-child {
+  font-size: small;
+}
+.count-item li button {
+  height: 30px;
 }

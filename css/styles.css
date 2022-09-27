@@ -1,8 +1,16 @@
 @import url(main.css);
 @import url(total.css);
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: antiquewhite;
+  position: relative;
+  height: 100vh;
 }
 
 header {

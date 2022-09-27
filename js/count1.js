@@ -39,6 +39,7 @@ function deleteCount(event) {
 function paintCount(newCount) {
   const li = document.createElement("li");
   li.id = newCount.id;
+  const div = document.createElement("div");
   const priceSpan = document.createElement("span");
   priceSpan.innerText = newCount.price;
   const reasonSpan = document.createElement("span");
@@ -46,8 +47,9 @@ function paintCount(newCount) {
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteCount);
-  li.appendChild(priceSpan);
-  li.appendChild(reasonSpan);
+  div.appendChild(priceSpan);
+  div.appendChild(reasonSpan);
+  li.appendChild(div);
   li.appendChild(button);
   countList.appendChild(li);
 }
