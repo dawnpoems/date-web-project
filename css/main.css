@@ -57,7 +57,10 @@ h1 {
 }
 .open-and-close {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 5px 0;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .count-item {
