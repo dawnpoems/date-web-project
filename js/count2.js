@@ -19,7 +19,7 @@ function handleOpenClose2() {
     openClose2Icon.innerText = "➖";
   } else {
     count2List.style.display = "none";
-    openClose2Name.innerText = "전체항목 열기";
+    openClose2Name.innerText = "전체항목 열기 (열어야 볼수있어요!)";
     openClose2Icon.innerText = "➕";
   }
 }
