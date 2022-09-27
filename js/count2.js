@@ -1,8 +1,14 @@
-const count2Form = document.querySelector(".count2-form");
-const count2Price = document.querySelector(".count2-form__content__price");
-const count2Reason = document.querySelector(".count2-form__content__reason");
-const count2List = document.querySelector(".count2-item");
-const total2count = document.querySelector(".total2__part__count");
+const count2Form = document.querySelector(".count2 .count-form");
+const count2Price = document.querySelector(
+  ".count2 .count-form__content__price"
+);
+const count2Reason = document.querySelector(
+  ".count2 .count-form__content__reason"
+);
+const count2List = document.querySelector(".count2 .count-item");
+const total2count = document.querySelectorAll(".total__part__count")[1];
+
+console.log(count2Form, count2Price, count2Reason, count2List, total2count);
 
 let counts2 = [];
 
