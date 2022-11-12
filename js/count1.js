@@ -51,7 +51,7 @@ function paintCount(newCount) {
   div.appendChild(reasonSpan);
   li.appendChild(div);
   li.appendChild(button);
-  countList.appendChild(li);
+  countList.prepend(li);
 }
 
 function handleCountSubmit(event) {
